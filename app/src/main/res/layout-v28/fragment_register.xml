@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -12,13 +13,12 @@
             android:orientation="vertical"
             android:background="@color/white">
 
-            <androidx.appcompat.widget.AppCompatImageButton
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="25dp"
+                android:layout_marginStart="19dp"
                 android:layout_marginTop="64dp"
-                android:background="@color/transparent"
                 android:src="@drawable/ic_back"/>
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -27,8 +27,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="48dp"
+                android:lineHeight="38dp"
                 android:text="@string/resgistry"
-                android:textColor="@color/primary"
+                android:textColor="#4356B4"
                 android:textSize="32sp"
                 android:textStyle="bold" />
 
@@ -38,8 +39,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="61dp"
+                android:lineHeight="17dp"
                 android:text="@string/full_name_upper"
                 android:textColor="#999999"
+                android:textFontWeight="500"
                 android:textSize="14sp"/>
 
             <androidx.appcompat.widget.AppCompatEditText
@@ -49,8 +52,10 @@
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="7dp"
                 android:drawableEnd="@drawable/ic_user"
+                android:lineHeight="21dp"
                 android:textColor="@color/black"
                 android:textColorHint="#676767"
+                android:textFontWeight="500"
                 android:textSize="18sp"/>
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -59,8 +64,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="40dp"
+                android:lineHeight="17dp"
                 android:text="@string/email_upper"
                 android:textColor="#999999"
+                android:textFontWeight="500"
                 android:textSize="14sp"/>
 
             <androidx.appcompat.widget.AppCompatEditText
@@ -70,8 +77,10 @@
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="7dp"
                 android:drawableEnd="@drawable/ic_mail"
+                android:lineHeight="21dp"
                 android:textColor="@color/black"
                 android:textColorHint="#676767"
+                android:textFontWeight="500"
                 android:textSize="18sp"/>
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -80,8 +89,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="40dp"
+                android:lineHeight="17dp"
                 android:text="@string/password_upper"
                 android:textColor="#999999"
+                android:textFontWeight="500"
                 android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatEditText
@@ -92,8 +103,10 @@
                 android:layout_marginTop="7dp"
                 android:drawableEnd="@drawable/ic_password"
                 android:inputType="textPassword"
+                android:lineHeight="21dp"
                 android:textColor="@color/black"
                 android:textColorHint="#676767"
+                android:textFontWeight="500"
                 android:textSize="18sp"/>
 
             <androidx.appcompat.widget.AppCompatCheckBox
@@ -103,9 +116,11 @@
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="30dp"
                 android:button="@drawable/ic_check"
-                android:text="@string/policies_and_terms"
                 android:layout_gravity="center"
+                android:text="@string/policies_and_terms"
+                android:lineHeight="17dp"
                 android:textColor="#999999"
+                android:textFontWeight="700"
                 android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -125,14 +140,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 />
+
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTitleNoAccount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="7dp"
+                android:lineHeight="17dp"
+                android:layout_gravity="center"
                 android:text="@string/had_a_account"
                 android:textColor="#999999"
-                android:layout_gravity="center"
+                android:textFontWeight="500"
                 android:textSize="14sp" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>

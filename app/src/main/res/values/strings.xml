@@ -3,6 +3,13 @@
     <string name="home">Home</string>
     <string name="favorite">Favorite</string>
     <string name="splash">Splash</string>
+    <string name="login">Login</string>
+    <string name="policies_and_terms">I agree to the policies and terms</string>
+    <string name="resgistry">Sign up</string>
+    <string name="full_name_upper">FULLNAME</string>
+    <string name="email_upper">EMAIL</string>
+    <string name="password_upper">PASSWORD</string>
+    <string name="had_a_account">Had a account? Login</string>
     <!-- TODO: Remove or change this placeholder text -->
 
 </resources>

@@ -3,7 +3,6 @@ package com.example.baseproject.ui.authentication
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.text.SpannableString
-import android.text.Spanned
 import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
@@ -15,24 +14,24 @@ import android.widget.CheckBox
 import android.widget.TextView
 import com.example.baseproject.R
 
-class SignUpFragment : Fragment() {
+class RegisterFragment : Fragment() {
 
     companion object {
-        fun newInstance() = SignUpFragment()
+        fun newInstance() = RegisterFragment()
     }
 
-    private lateinit var viewModel: SignUpViewModel
+    private lateinit var viewModel: RegisterViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_sign_up, container, false)
+        return inflater.inflate(R.layout.fragment_register, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SignUpViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

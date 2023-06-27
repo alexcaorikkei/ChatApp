@@ -2,6 +2,8 @@ package com.example.baseproject.ui.authentication
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.os.Parcel
+import android.os.Parcelable
 import android.text.SpannableString
 import android.text.TextPaint
 import android.text.method.LinkMovementMethod
@@ -12,32 +14,40 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
+import androidx.fragment.app.viewModels
 import com.example.baseproject.R
+import com.example.baseproject.databinding.FragmentRegisterBinding
+import com.example.baseproject.navigation.AppNavigation
+import com.example.core.base.BaseFragment
+import com.example.core.utils.toast
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-class RegisterFragment : Fragment() {
+@AndroidEntryPoint
+class RegisterFragment() : BaseFragment<FragmentRegisterBinding, RegisterViewModel>(R.layout.fragment_register) {
 
-    companion object {
-        fun newInstance() = RegisterFragment()
+
+    @Inject
+    lateinit var appNavigation: AppNavigation
+    private val viewModel: RegisterViewModel by viewModels()
+
+    override fun initView(savedInstanceState: Bundle?) {
+        super.initView(savedInstanceState)
+        binding.cbTerm.makeLinks(
+            Pair(getString(R.string.policies), View.OnClickListener {
+                "policies".toast(requireContext())
+            }),
+            Pair(getString(R.string.terms), View.OnClickListener {
+                "terms".toast(requireContext())
+            })
+        )
+
+        binding.tvTitleHadAccount?.setOnClickListener {
+            appNavigation.openRegisterToLoginScreen()
+        }
     }
 
-    private lateinit var viewModel: RegisterViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_register, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(RegisterViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
+    override fun getVM() = viewModel
 
     private fun CheckBox.makeLinks(vararg links: Pair<String, View.OnClickListener>) {
         val spannableString = SpannableString(this.text)

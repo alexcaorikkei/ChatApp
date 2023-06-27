@@ -12,11 +12,24 @@ class AppNavigatorImpl @Inject constructor() : BaseNavigatorImpl(),
     AppNavigation, DemoNavigation {
 
     override fun openSplashToHomeScreen(bundle: Bundle?) {
-        openScreen(R.id.action_splashFragment_to_homeFragment, bundle)
+
     }
 
+    override fun openSplashToLoginScreen(bundle: Bundle?) {
+        openScreen(R.id.action_splashFragment_to_loginFragment, bundle)
+    }
+
+    override fun openRegisterToLoginScreen(bundle: Bundle?) {
+        openScreen(R.id.action_registerFragment_to_loginFragment, bundle)
+    }
+
+    override fun openLoginToRegisterScreen(bundle: Bundle?) {
+        openScreen(R.id.action_loginFragment_to_registerFragment, bundle)
+    }
+
+
     override fun openDemoViewPager(bundle: Bundle?) {
-        openScreen(R.id.action_homeFragment_to_demoViewPager, bundle)
+
     }
 
 }

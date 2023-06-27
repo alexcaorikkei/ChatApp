@@ -1,7 +1,7 @@
 package com.example.baseproject.ui.authentication
 
-import androidx.lifecycle.ViewModel
+import com.example.core.base.BaseViewModel
 
-class RegisterViewModel : ViewModel() {
+class RegisterViewModel : BaseViewModel() {
     // TODO: Implement the ViewModel
 }

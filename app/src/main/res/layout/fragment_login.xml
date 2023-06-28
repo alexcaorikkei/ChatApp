@@ -101,6 +101,5 @@
                 android:textSize="14sp" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-
     </ScrollView>
 </layout>

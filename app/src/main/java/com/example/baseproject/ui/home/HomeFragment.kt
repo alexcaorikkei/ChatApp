@@ -22,6 +22,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(R.layout.f
     lateinit var appNavigation: AppNavigation
 
     private val viewModel: HomeViewModel by viewModels()
+    override fun getVM() = viewModel
 
     override fun initView(savedInstanceState: Bundle?) {
         super.initView(savedInstanceState)
@@ -35,67 +36,4 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(R.layout.f
         val navController = navHostFragment.navController
         binding.bottomNav.setupWithNavController(navController)
     }
-
-    override fun getVM() = viewModel
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        Timber.tag("VietBH").d("A   "+"onAttach")
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        Timber.tag("VietBH").d("A   "+"onCreate")
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        Timber.tag("VietBH").d("A   "+"onCreateView")
-        return super.onCreateView(inflater, container, savedInstanceState)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        Timber.tag("VietBH").d("A   "+"onViewCreated")
-        super.onViewCreated(view, savedInstanceState)
-    }
-
-    override fun onStart() {
-        Timber.tag("VietBH").d("A   "+"onStart")
-        super.onStart()
-    }
-
-    override fun onResume() {
-        Timber.tag("VietBH").d("A   "+"onResume")
-        super.onResume()
-    }
-
-    override fun onPause() {
-        Timber.tag("VietBH").d("A   "+"onPause")
-        super.onPause()
-    }
-
-    override fun onStop() {
-        Timber.tag("VietBH").d("A   "+"onStop")
-        super.onStop()
-    }
-
-    override fun onDestroyView() {
-        Timber.tag("VietBH").d("A   "+"onDestroyView")
-        super.onDestroyView()
-    }
-
-    override fun onDestroy() {
-        Timber.tag("VietBH").d("A   "+"onDestroy")
-        super.onDestroy()
-    }
-
-    override fun onDetach() {
-        Timber.tag("VietBH").d("A   "+"onCreate")
-        super.onDetach()
-    }
-
-
 }

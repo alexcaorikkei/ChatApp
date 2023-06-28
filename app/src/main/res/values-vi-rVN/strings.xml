@@ -13,4 +13,7 @@
     <string name="dont_have_an_account">Chưa có tài khoản? Đăng ký</string>
     <string name="policies">chính sách</string>
     <string name="terms">điều khoản</string>
+    <string name="messages">Tin nhắn</string>
+    <string name="friends">Bạn bè</string>
+    <string name="profile">Trang cá nhân</string>
 </resources>

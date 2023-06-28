@@ -1,101 +1,45 @@
 package com.example.baseproject.ui.home
 
-import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.baseproject.R
 import com.example.baseproject.databinding.FragmentHomeBinding
 import com.example.baseproject.navigation.AppNavigation
 import com.example.core.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
-import timber.log.Timber
 import javax.inject.Inject
+
+
 
 @AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(R.layout.fragment_home) {
     @Inject
     lateinit var appNavigation: AppNavigation
-
     private val viewModel: HomeViewModel by viewModels()
+    private lateinit var navController: NavController
+    private lateinit var appBarConfiguration: AppBarConfiguration
+    override fun getVM() = viewModel
 
     override fun initView(savedInstanceState: Bundle?) {
         super.initView(savedInstanceState)
-        setupBottomNavigationBar()
-    }
-
-    private fun setupBottomNavigationBar() {
-        val navHostFragment = childFragmentManager.findFragmentById(
-            R.id.nav_host_container
-        ) as NavHostFragment
-        val navController = navHostFragment.navController
-        binding.bottomNav.setupWithNavController(navController)
-    }
-
-    override fun getVM() = viewModel
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        Timber.tag("VietBH").d("A   "+"onAttach")
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        Timber.tag("VietBH").d("A   "+"onCreate")
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        Timber.tag("VietBH").d("A   "+"onCreateView")
-        return super.onCreateView(inflater, container, savedInstanceState)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        Timber.tag("VietBH").d("A   "+"onViewCreated")
         super.onViewCreated(view, savedInstanceState)
+        navController = (childFragmentManager.findFragmentById(R.id.nav_host_container) as NavHostFragment).navController
+        binding.bottomNav.setupWithNavController(navController)
     }
 
-    override fun onStart() {
-        Timber.tag("VietBH").d("A   "+"onStart")
-        super.onStart()
+    override fun bindingStateView() {
+        super.bindingStateView()
     }
 
-    override fun onResume() {
-        Timber.tag("VietBH").d("A   "+"onResume")
-        super.onResume()
+    override fun bindingAction() {
+        super.bindingAction()
     }
-
-    override fun onPause() {
-        Timber.tag("VietBH").d("A   "+"onPause")
-        super.onPause()
-    }
-
-    override fun onStop() {
-        Timber.tag("VietBH").d("A   "+"onStop")
-        super.onStop()
-    }
-
-    override fun onDestroyView() {
-        Timber.tag("VietBH").d("A   "+"onDestroyView")
-        super.onDestroyView()
-    }
-
-    override fun onDestroy() {
-        Timber.tag("VietBH").d("A   "+"onDestroy")
-        super.onDestroy()
-    }
-
-    override fun onDetach() {
-        Timber.tag("VietBH").d("A   "+"onCreate")
-        super.onDetach()
-    }
-
-
 }

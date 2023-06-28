@@ -9,9 +9,4 @@ import javax.inject.Inject
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     val savedStateHandle: SavedStateHandle
-) : BaseViewModel() {
-
-    init {
-        Log.d("TAG", ": ")
-    }
-}
+) : BaseViewModel()

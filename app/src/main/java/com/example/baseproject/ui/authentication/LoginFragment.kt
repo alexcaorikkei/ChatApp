@@ -25,15 +25,19 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>(R.layou
 
     override fun initView(savedInstanceState: Bundle?) {
         super.initView(savedInstanceState)
-    }
-
-    override fun bindingAction() {
-        super.bindingAction()
         binding.tvTitleNoAccount.makeLinks(
             Pair(getString(R.string.resgistry), View.OnClickListener {
                 appNavigation.openLoginToRegisterScreen()
             })
         )
+
+        binding.btnLogin.setOnClickListener {
+            appNavigation.openLoginToHomeScreen()
+        }
+    }
+
+    override fun bindingAction() {
+        super.bindingAction()
     }
 
     override fun bindingStateView() {

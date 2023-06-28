@@ -3,7 +3,9 @@ package com.example.baseproject.container
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
 import com.example.baseproject.R
 import com.example.baseproject.databinding.ActivityMainBinding
 import com.example.baseproject.navigation.AppNavigation
@@ -34,13 +36,14 @@ class MainActivity : BaseActivityNotRequireViewModel<ActivityMainBinding>(), Dem
 
     override val layoutId = R.layout.activity_main
 
+    private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val navHostFragment = supportFragmentManager
-            .findFragmentById(R.id.nav_host) as NavHostFragment
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         appNavigation.bind(navHostFragment.navController)
-
         lifecycleScope.launch {
             val language = rxPreferences.getLanguage().first()
             language?.let { setLanguage(it) }
@@ -74,5 +77,4 @@ class MainActivity : BaseActivityNotRequireViewModel<ActivityMainBinding>(), Dem
     override fun onClickCancel() {
         "Cancel Activity".toast(this)
     }
-
 }

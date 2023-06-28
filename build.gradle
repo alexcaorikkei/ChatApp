@@ -6,7 +6,7 @@ buildscript {
     }
     apply from: rootProject.file('dependencies.gradle')
     dependencies {
-        classpath libraries.androidGradle
+        classpath 'com.android.tools.build:gradle:8.1.0-rc01'
         classpath libraries.kotlinGradle
         classpath libraries.hiltGradle
     }

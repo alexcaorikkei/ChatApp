@@ -16,4 +16,8 @@
     <string name="messages">Tin nhắn</string>
     <string name="friends">Bạn bè</string>
     <string name="profile">Trang cá nhân</string>
+    <string name="name_demo">Name Demo</string>
+    <string name="message_demo">Tin nhắn tạm thời</string>
+    <string name="time_demo">12:00</string>
+    <string name="search_messages">Tìm kiếm tín nhắn…</string>
 </resources>

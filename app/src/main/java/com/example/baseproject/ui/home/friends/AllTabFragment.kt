@@ -6,27 +6,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import com.example.baseproject.R
+import com.example.baseproject.databinding.FragmentAllTabBinding
+import com.example.baseproject.navigation.AppNavigation
+import com.example.baseproject.ui.home.HomeViewModel
+import com.example.core.base.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-class AllTabFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = AllTabFragment()
-    }
-
-    private lateinit var viewModel: AllTabViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_all_tab, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(AllTabViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
-
+@AndroidEntryPoint
+class AllTabFragment : BaseFragment<FragmentAllTabBinding, AllTabViewModel>(R.layout.fragment_all_tab) {
+    @Inject
+    lateinit var appNavigation: AppNavigation
+    private val viewModel: AllTabViewModel by viewModels()
+    override fun getVM() = viewModel
 }

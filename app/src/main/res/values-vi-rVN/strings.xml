@@ -20,4 +20,6 @@
     <string name="message_demo">Tin nhắn tạm thời</string>
     <string name="time_demo">12:00</string>
     <string name="search_messages">Tìm kiếm tín nhắn…</string>
+    <string name="search_friends">Seach friend...</string>
+    <string name="add_friend">Add friend</string>
 </resources>

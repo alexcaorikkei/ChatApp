@@ -16,4 +16,14 @@
     <string name="messages">Messages</string>
     <string name="friends">Friends</string>
     <string name="profile">Profile</string>
+    <string name="search_messages">Search message…</string>
+    <string name="name_demo">Name Demo</string>
+    <string name="time_demo">12:00</string>
+    <string name="message_demo">Message demo</string>
+    <string name="search_friends">Seach friend...</string>
+    <string name="add_friend">Add friend</string>
+    <string name="all">All</string>
+    <string name="request">Request</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

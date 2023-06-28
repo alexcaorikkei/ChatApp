@@ -25,16 +25,17 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 
     buildFeatures {
         dataBinding = true
     }
+    namespace 'com.example.baseproject'
 }
 
 dependencies {
@@ -50,6 +51,9 @@ dependencies {
 
     implementation libraries.hilt
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.mediarouter:mediarouter:1.4.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
     kapt libraries.hiltSupport
     //implementation libraries.hiltViewModel
     //kapt libraries.hiltCompiler

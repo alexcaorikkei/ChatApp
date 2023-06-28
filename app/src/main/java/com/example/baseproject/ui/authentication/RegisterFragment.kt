@@ -1,17 +1,11 @@
 package com.example.baseproject.ui.authentication
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.os.Parcel
-import android.os.Parcelable
 import android.text.SpannableString
 import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.fragment.app.viewModels
@@ -42,14 +36,37 @@ class RegisterFragment() : BaseFragment<FragmentRegisterBinding, RegisterViewMod
             })
         )
 
-        binding.tvTitleHadAccount?.setOnClickListener {
-            appNavigation.openRegisterToLoginScreen()
-        }
+        binding.tvTitleHadAccount.makeLinks(
+            Pair(getString(R.string.login), View.OnClickListener {
+                appNavigation.openRegisterToLoginScreen()
+            })
+        )
     }
 
     override fun getVM() = viewModel
 
     private fun CheckBox.makeLinks(vararg links: Pair<String, View.OnClickListener>) {
+        val spannableString = SpannableString(this.text)
+        for(link in links) {
+            val clickableSpan = object : ClickableSpan() {
+                override fun onClick(widget: View) {
+                    widget.invalidate()
+                    link.second.onClick(widget)
+                }
+                override fun updateDrawState(ds: TextPaint) {
+                    ds.color = ds.linkColor
+                    super.updateDrawState(ds)
+                }
+            }
+            val start = this.text.findAnyOf(listOf(link.first))?.first ?: 0
+            val end = start + link.first.length
+            spannableString.setSpan(clickableSpan, start, end, SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE)
+        }
+        this.movementMethod = LinkMovementMethod.getInstance()
+        this.setText(spannableString, TextView.BufferType.SPANNABLE)
+    }
+
+    private fun TextView.makeLinks(vararg links: Pair<String, View.OnClickListener>) {
         val spannableString = SpannableString(this.text)
         for(link in links) {
             val clickableSpan = object : ClickableSpan() {

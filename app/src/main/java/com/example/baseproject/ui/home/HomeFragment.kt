@@ -22,7 +22,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(R.layout.f
     lateinit var appNavigation: AppNavigation
     private val viewModel: HomeViewModel by viewModels()
     private lateinit var navController: NavController
-    private lateinit var appBarConfiguration: AppBarConfiguration
     override fun getVM() = viewModel
 
     override fun initView(savedInstanceState: Bundle?) {

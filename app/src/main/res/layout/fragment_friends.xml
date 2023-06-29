@@ -77,33 +77,12 @@
             app:tabTextColor="@color/black"
             app:tabSelectedTextColor="@color/primary"
             app:layout_constraintTop_toTopOf="@id/iv_background">
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/friends"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:text="@string/friends"/>
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/all"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:text="@string/all"/>
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/request"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:text="@string/request"/>
         </com.google.android.material.tabs.TabLayout>
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/friend_nav_host_container"
-            android:name="androidx.navigation.fragment.NavHostFragment"
+        <androidx.viewpager2.widget.ViewPager2
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:navGraph="@navigation/friends_nav_gaph"
+            android:layout_height="800dp"
+            android:id="@+id/friends_view_pager"
             app:layout_constraintTop_toBottomOf="@id/friends_nav"/>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

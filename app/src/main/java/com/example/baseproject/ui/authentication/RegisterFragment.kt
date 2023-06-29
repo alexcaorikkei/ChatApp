@@ -37,11 +37,24 @@ class RegisterFragment() : BaseFragment<FragmentRegisterBinding, RegisterViewMod
                 "terms".toast(requireContext())
             })
         )
-
         binding.tvTitleHadAccount.makeLinks(
             Pair(getString(R.string.login), View.OnClickListener {
                 appNavigation.openRegisterToLoginScreen()
             })
         )
+    }
+
+    override fun bindingAction() {
+        super.bindingAction()
+        listen()
+    }
+
+    private fun listen() {
+        binding.btnRegister.setOnClickListener {
+            viewModel.signUp(
+                binding.edtEmail.text.toString(),
+                binding.edtPassword.text.toString(),
+            )
+        }
     }
 }

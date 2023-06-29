@@ -1,32 +1,18 @@
 package com.example.baseproject.ui.home.profile
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+
+import androidx.fragment.app.viewModels
 import com.example.baseproject.R
+import com.example.baseproject.databinding.FragmentEditProfileBinding
+import com.example.baseproject.navigation.AppNavigation
+import com.example.core.base.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-class EditProfileFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = EditProfileFragment()
-    }
-
-    private lateinit var viewModel: EditProfileViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_edit_profile, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(EditProfileViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
-
+@AndroidEntryPoint
+class EditProfileFragment : BaseFragment<FragmentEditProfileBinding, EditProfileViewModel>(R.layout.fragment_edit_profile) {
+    @Inject
+    lateinit var appNavigaiton: AppNavigation
+    private val viewModel: EditProfileViewModel by viewModels()
+    override fun getVM() = viewModel
 }

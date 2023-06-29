@@ -21,4 +21,11 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding, ProfileViewModel>(R
     lateinit var appNavigation: AppNavigation
     val viewModel: ProfileViewModel by viewModels()
     override fun getVM() = viewModel
+
+    override fun bindingAction() {
+        super.bindingAction()
+        binding.btnEditProfile.setOnClickListener() {
+            appNavigation.openHomeToEditProfileScreen()
+        }
+    }
 }

@@ -1,7 +1,8 @@
 package com.example.baseproject.ui.home.profile
 
-import androidx.lifecycle.ViewModel
+import com.example.core.base.BaseViewModel
+import javax.inject.Inject
 
-class EditProfileViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+class EditProfileViewModel @Inject constructor() : BaseViewModel() {
+
 }

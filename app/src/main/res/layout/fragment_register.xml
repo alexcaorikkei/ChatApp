@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="61dp"
-                android:text="@string/full_name_upper"
+                android:text="@string/full_name"
                 android:textColor="#999999"
                 android:textSize="14sp"/>
 
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="40dp"
-                android:text="@string/email_upper"
+                android:text="@string/email"
                 android:textColor="#999999"
                 android:textSize="14sp"/>
 
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="40dp"
-                android:text="@string/password_upper"
+                android:text="@string/password"
                 android:textColor="#999999"
                 android:textSize="14sp" />
 

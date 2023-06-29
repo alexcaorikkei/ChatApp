@@ -4,9 +4,10 @@
     <string name="login">Login</string>
     <string name="policies_and_terms">I agree to the policies and terms</string>
     <string name="resgistry">Sign Up</string>
-    <string name="full_name_upper">FULLNAME</string>
-    <string name="email_upper">EMAIL</string>
-    <string name="password_upper">PASSWORD</string>
+    <string name="full_name">Full name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="phone_number">Phone Number</string>
     <string name="had_a_account">Had a account? Login</string>
     <string name="dont_have_an_account">Don\'t have a account? Sign Up</string>
     <string name="policies">policies</string>
@@ -28,4 +29,7 @@
     <string name="version_demo">1.0.0</string>
     <string name="version">Version</string>
     <string name="notifications">Notifications</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save">Save</string>
+    <string name="birthday">Birthday</string>
 </resources>

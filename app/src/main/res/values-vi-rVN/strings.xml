@@ -22,4 +22,8 @@
     <string name="search_messages">Tìm kiếm tín nhắn…</string>
     <string name="search_friends">Seach friend...</string>
     <string name="add_friend">Add friend</string>
+    <string name="email_demo">alexcao194@gmail.com\n</string>
+    <string name="languages">Languages</string>
+    <string name="logout">Logout</string>
+    <string name="version">Version</string>
 </resources>

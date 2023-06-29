@@ -26,4 +26,10 @@
     <string name="request">Request</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_demo">alexcao194@gmail.com\n</string>
+    <string name="languages">Languages</string>
+    <string name="logout">Logout</string>
+    <string name="version_demo">1.0.0</string>
+    <string name="version">Version</string>
+    <string name="notifications">Notifications</string>
 </resources>

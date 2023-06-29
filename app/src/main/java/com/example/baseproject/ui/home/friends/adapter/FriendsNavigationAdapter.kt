@@ -2,8 +2,7 @@ package com.example.baseproject.ui.home.friends.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.baseproject.ui.home.friends.AllTabFragment
-import com.example.baseproject.ui.home.friends.FriendTabFragment
+import com.example.baseproject.ui.home.friends.ListFriendsFragment
 
 class FriendsNavigationAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
     override fun getItemCount(): Int {
@@ -12,10 +11,8 @@ class FriendsNavigationAdapter(fragment: Fragment) : FragmentStateAdapter(fragme
 
     override fun createFragment(position: Int): Fragment {
         return when(position) {
-            0 -> FriendTabFragment()
-            1 -> AllTabFragment()
-            2 -> FriendTabFragment()
-            else -> FriendTabFragment()
+            0, 1, 2 -> ListFriendsFragment()
+            else -> ListFriendsFragment()
         }
     }
 

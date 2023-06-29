@@ -1,4 +1,4 @@
-package ro.alexmamo.firebasesigninwithemailandpassword.domain.model
+package com.example.baseproject.domain.model
 
 sealed class Response<out T> {
     object Loading: Response<Nothing>()

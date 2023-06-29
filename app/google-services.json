@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "24239889479",
+    "project_id": "chat-app-6d0a8",
+    "storage_bucket": "chat-app-6d0a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24239889479:android:9ff30a8693b860efb86562",
+        "android_client_info": {
+          "package_name": "com.alexcao.interm.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24239889479-8fpa8t15jqjr750nhvt6op4dd6fqjtd9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIilCeinAoKUpD9wm2U2zZMapvC5qpaxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24239889479-8fpa8t15jqjr750nhvt6op4dd6fqjtd9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

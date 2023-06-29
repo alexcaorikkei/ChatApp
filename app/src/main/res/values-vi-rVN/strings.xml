@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="home">Trang chu</string>
-    <string name="favorite">Yeu thich</string>
+    <string name="app_name">Alex Messenger</string>
     <string name="splash">Bắn tung tóe</string>
     <string name="had_a_account">Đã có tài khoản? Đăng nhập</string>
     <string name="login">Đăng nhập</string>
@@ -16,14 +15,18 @@
     <string name="messages">Tin nhắn</string>
     <string name="friends">Bạn bè</string>
     <string name="profile">Trang cá nhân</string>
-    <string name="name_demo">Name Demo</string>
+    <string name="name_demo">Cao Việt Đức</string>
     <string name="message_demo">Tin nhắn tạm thời</string>
     <string name="time_demo">12:00</string>
     <string name="search_messages">Tìm kiếm tín nhắn…</string>
-    <string name="search_friends">Seach friend...</string>
-    <string name="add_friend">Add friend</string>
-    <string name="email_demo">alexcao194@gmail.com\n</string>
-    <string name="languages">Languages</string>
-    <string name="logout">Logout</string>
-    <string name="version">Version</string>
+    <string name="search_friends">Tìm kiếm bạn bè…</string>
+    <string name="add_friend">Thêm bạn</string>
+    <string name="email_demo">alexcao194@gmail.com</string>
+    <string name="languages">Ngôn ngữ</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="version">Phiên bản</string>
+    <string name="all">Tất cả</string>
+    <string name="request">Yêu cầu</string>
+    <string name="version_demo">1.0.0</string>
+    <string name="notifications">Thông báo</string>
 </resources>

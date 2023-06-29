@@ -8,10 +8,10 @@
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:fitsSystemWindows">false</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="android:windowActionBarOverlay">true</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/primary</item>
     </style>
 
     <!-- Splash Screen theme. -->

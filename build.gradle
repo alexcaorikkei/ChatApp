@@ -7,6 +7,7 @@ buildscript {
     apply from: rootProject.file('dependencies.gradle')
     dependencies {
         classpath 'com.android.tools.build:gradle:8.1.0-rc01'
+        classpath 'com.google.gms:google-services:4.3.15'
         classpath libraries.kotlinGradle
         classpath libraries.hiltGradle
     }
@@ -19,7 +20,6 @@ allprojects {
         maven { url 'https://jitpack.io' }
     }
     apply from: rootProject.file('dependencies.gradle')
-
 }
 
 task clean(type: Delete) {

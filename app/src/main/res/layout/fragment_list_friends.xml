@@ -2,15 +2,14 @@
 <layout>
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/friends"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.home.friends.FriendTabFragment">
+        tools:context=".ui.home.friends.ListFriendsFragment">
 
-        <TextView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_friends"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Fucking feature" />
-
+            tools:listitem="@layout/item_friend"/>
     </FrameLayout>
 </layout>

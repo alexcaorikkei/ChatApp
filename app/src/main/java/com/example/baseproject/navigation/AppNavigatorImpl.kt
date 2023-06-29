@@ -36,6 +36,10 @@ class AppNavigatorImpl @Inject constructor() : BaseNavigatorImpl(),
         openScreen(R.id.action_homeFragment_to_editProfileFragment, bundle)
     }
 
+    override fun openRegisterToHomeScreen(bundle: Bundle?) {
+        openScreen(R.id.action_registerFragment_to_homeFragment, bundle)
+    }
+
     override fun openDemoViewPager(bundle: Bundle?) {
 
     }

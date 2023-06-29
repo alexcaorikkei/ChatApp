@@ -16,7 +16,7 @@
     <string name="messages">Tin nhắn</string>
     <string name="friends">Bạn bè</string>
     <string name="profile">Trang cá nhân</string>
-    <string name="name_demo">Cao Việt Đức</string>
+    <string name="name_demo">Cow Zịt Duck</string>
     <string name="message_demo">Tin nhắn tạm thời</string>
     <string name="time_demo">12:00</string>
     <string name="search_messages">Tìm kiếm tín nhắn…</string>
@@ -27,9 +27,13 @@
     <string name="logout">Đăng xuất</string>
     <string name="version">Phiên bản</string>
     <string name="all">Tất cả</string>
+    <string name="edit_profile">Sửa trang cá nhân</string>
     <string name="request">Yêu cầu</string>
     <string name="version_demo">1.0.0</string>
     <string name="notifications">Thông báo</string>
-    <string name="save">Save</string>
-    <string name="birthday">Birthday</string>
+    <string name="save">Lưu</string>
+    <string name="birthday">Ngày sinh</string>
+    <string name="sign_up_successfully">Đăng kí thành công, vui lòng kiểm tra email của bạn</string>
+    <string name="email_already_exists">Tải khoản đã tồn tại</string>
+    <string name="email_or_password_is_empty">Email và mật khẩu không được trống</string>
 </resources>

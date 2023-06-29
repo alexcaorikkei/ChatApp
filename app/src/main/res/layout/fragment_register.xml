@@ -6,137 +6,151 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/white">
-
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/ivBack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="64dp"
-                android:background="@color/transparent"
-                android:src="@drawable/ic_back"/>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvRegister"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="48dp"
-                android:text="@string/resgistry"
-                android:textColor="@color/primary"
-                android:textSize="32sp"
-                android:textStyle="bold" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="61dp"
-                android:text="@string/full_name"
-                android:textColor="#999999"
-                android:textSize="14sp"/>
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/edtName"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="7dp"
-                android:drawableEnd="@drawable/ic_user"
-                android:textColor="@color/black"
-                android:textColorHint="#676767"
-                android:textSize="18sp"/>
+                android:orientation="vertical"
+                android:background="@color/white">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/email"
-                android:textColor="#999999"
-                android:textSize="14sp"/>
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="64dp"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_back"/>
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/edtEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="7dp"
-                android:drawableEnd="@drawable/ic_mail"
-                android:textColor="@color/black"
-                android:textColorHint="#676767"
-                android:textSize="18sp"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="48dp"
+                    android:text="@string/resgistry"
+                    android:textColor="@color/primary"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="40dp"
-                android:text="@string/password"
-                android:textColor="#999999"
-                android:textSize="14sp" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="61dp"
+                    android:text="@string/full_name"
+                    android:textColor="#999999"
+                    android:textSize="14sp"/>
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/edtPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="7dp"
-                android:drawableEnd="@drawable/ic_password"
-                android:inputType="textPassword"
-                android:textColor="@color/black"
-                android:textColorHint="#676767"
-                android:textSize="18sp"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="7dp"
+                    android:drawableEnd="@drawable/ic_user"
+                    android:textColor="@color/black"
+                    android:textColorHint="#676767"
+                    android:textSize="18sp"/>
 
-            <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/cbTerm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="30dp"
-                android:button="@drawable/ic_check"
-                android:text="@string/policies_and_terms"
-                android:layout_gravity="center"
-                android:textColor="#999999"
-                android:textSize="14sp" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/email"
+                    android:textColor="#999999"
+                    android:textSize="14sp"/>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_register"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="25dp"
-                android:layout_marginTop="47dp"
-                android:background="@drawable/button_login"
-                android:enabled="true"
-                android:paddingVertical="16dp"
-                android:text="@string/resgistry"
-                android:textColor="@color/white" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="7dp"
+                    android:inputType="textEmailAddress"
+                    android:drawableEnd="@drawable/ic_mail"
+                    android:textColor="@color/black"
+                    android:textColorHint="#676767"
+                    android:textSize="18sp"/>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/password"
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvTitleHadAccount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="7dp"
-                android:text="@string/had_a_account"
-                android:textColor="#999999"
-                android:layout_gravity="center"
-                android:textSize="14sp" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="7dp"
+                    android:drawableEnd="@drawable/ic_password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black"
+                    android:textColorHint="#676767"
+                    android:textSize="18sp"/>
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbTerm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="30dp"
+                    android:button="@drawable/ic_check"
+                    android:text="@string/policies_and_terms"
+                    android:layout_gravity="center"
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="47dp"
+                    android:background="@drawable/button_login"
+                    android:enabled="true"
+                    android:paddingVertical="16dp"
+                    android:text="@string/resgistry"
+                    android:textColor="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitleHadAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:text="@string/had_a_account"
+                    android:textColor="#999999"
+                    android:layout_gravity="center"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/progress_circular"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <include
+                android:id="@+id/include_progress"
+                layout="@layout/progress_layout"/>
+        </FrameLayout>
 
     </ScrollView>
 </layout>

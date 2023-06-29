@@ -32,4 +32,7 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="save">Save</string>
     <string name="birthday">Birthday</string>
+    <string name="sign_up_successfully">Sign up successfully, please check your mail</string>
+    <string name="email_already_exists">Email already exists</string>
+    <string name="email_or_password_is_empty">Email or password is empty</string>
 </resources>

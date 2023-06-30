@@ -4,8 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.baseproject.databinding.ItemFriendBinding
-import com.example.baseproject.ui.home.friends.FriendModel
-import com.example.baseproject.ui.home.messages.MessageModel
+import com.example.baseproject.ui.home.friends.model.FriendModel
 
 class FriendsRecycleViewHolder(var binding: ItemFriendBinding): RecyclerView.ViewHolder(binding.root) {
 
@@ -24,7 +23,7 @@ class FriendsRecycleViewAdapter(private val listFriends: List<FriendModel>): Rec
         val friendData = listFriends[position]
         with(holder.binding) {
 //           ivAvatar =
-            tvName.text = friendData.name
+            tvName.text = friendData.displayName
         }
     }
 }

@@ -35,8 +35,19 @@ class AuthRepositoryImpl @Inject constructor(private val auth: FirebaseAuth) : A
         }
     }
 
+    override suspend fun sendPasswordResetEmail(email: String): Response<Boolean> {
+        return try {
+            auth.sendPasswordResetEmail(email).await()
+            Response.Success(true)
+        } catch (e: Exception) {
+            Response.Failure(e)
+        }
+    }
+
     override fun logOut() {
         auth.signOut()
     }
+
+
 
 }

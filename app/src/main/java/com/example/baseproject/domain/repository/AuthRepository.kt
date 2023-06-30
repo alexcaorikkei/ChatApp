@@ -8,5 +8,7 @@ interface AuthRepository {
     suspend fun firebaseSignUp(email: String, password: String): Response<Boolean>
     suspend fun firebaseLogin(email: String, password: String): Response<Boolean>
     suspend fun sendEmailVerification(): Response<Boolean>
+    suspend fun sendPasswordResetEmail(email: String): Response<Boolean>
+
     fun logOut()
 }

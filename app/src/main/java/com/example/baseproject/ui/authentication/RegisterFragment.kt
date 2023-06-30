@@ -1,13 +1,7 @@
 package com.example.baseproject.ui.authentication
 
 import android.os.Bundle
-import android.text.SpannableString
-import android.text.TextPaint
-import android.text.method.LinkMovementMethod
-import android.text.style.ClickableSpan
 import android.view.View
-import android.widget.CheckBox
-import android.widget.TextView
 import androidx.fragment.app.viewModels
 import com.example.baseproject.R
 import com.example.baseproject.databinding.FragmentRegisterBinding
@@ -16,8 +10,7 @@ import com.example.baseproject.extension.makeLinks
 import com.example.baseproject.navigation.AppNavigation
 import com.example.core.base.BaseFragment
 import com.example.core.utils.toast
-import com.google.firebase.auth.FirebaseAuthException
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import dagger.hilt.android.AndroidEntryPoint
 import java.lang.IllegalArgumentException
@@ -53,7 +46,7 @@ class RegisterFragment() : BaseFragment<FragmentRegisterBinding, RegisterViewMod
         super.bindingAction()
         listen()
         viewModel.apply {
-            response.observe(this@RegisterFragment) { response ->
+            signUpResponse.observe(this@RegisterFragment) { response ->
                 when (response) {
                     is Response.Loading -> {}
                     is Response.Success -> {
@@ -68,6 +61,9 @@ class RegisterFragment() : BaseFragment<FragmentRegisterBinding, RegisterViewMod
                             is IllegalArgumentException -> {
                                 resources.getString(R.string.email_or_password_is_empty).toast(requireContext())
                             }
+                            is FirebaseNetworkException -> {
+                                resources.getString(R.string.no_internet_connection).toast(requireContext())
+                            }
                             else -> {
                                 response.e.toString().toast(requireContext())
                             }
@@ -81,7 +77,7 @@ class RegisterFragment() : BaseFragment<FragmentRegisterBinding, RegisterViewMod
     override fun bindingStateView() {
         super.bindingStateView()
         viewModel.apply {
-            response.observe(this@RegisterFragment) { response ->
+            signUpResponse.observe(this@RegisterFragment) { response ->
                 when (response) {
                     is Response.Loading -> {
                         binding.btnRegister.isEnabled = false
@@ -114,6 +110,7 @@ class RegisterFragment() : BaseFragment<FragmentRegisterBinding, RegisterViewMod
             viewModel.signUp(
                 binding.edtEmail.text.toString(),
                 binding.edtPassword.text.toString(),
+                binding.edtName.text.toString()
             )
         }
     }

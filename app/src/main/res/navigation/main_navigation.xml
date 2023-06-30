@@ -34,22 +34,14 @@
             app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_loginFragment_to_homeFragment"
+            app:popUpToInclusive="true"
             app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.baseproject.ui.authentication.RegisterFragment"
         tools:layout="@layout/fragment_register"
-        android:label="RegisterFragment" >
-        <action
-            android:id="@+id/action_registerFragment_to_homeFragment"
-            app:popUpToInclusive="true"
-            app:enterAnim="@anim/slide_in_left"
-            app:exitAnim="@anim/slide_out_right"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        android:label="RegisterFragment" />
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.baseproject.ui.home.HomeFragment"

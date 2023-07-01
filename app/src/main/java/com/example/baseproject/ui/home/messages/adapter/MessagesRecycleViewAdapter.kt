@@ -28,7 +28,7 @@ class MessageAdapter(private val listMessages: List<MessageModel>): RecyclerView
             tvMessage.text = messageData.message
             tvTime.text = messageData.time
             if (messageData.isSeen) {
-                tvMessage.setTextColor(tvMessage.context.getColor(R.color.gray))
+                tvMessage.setTextColor(tvMessage.context.getColor(com.example.core.R.color.gray))
             } else {
                 tvMessage.setTextColor(tvMessage.context.getColor(android.R.color.black))
             }

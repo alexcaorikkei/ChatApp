@@ -32,8 +32,8 @@ class FavoriteFragment :
         requireContext().setLanguage(language)
         viewModel.setLanguage(language)
 
-        binding.btnVietNam.text = getString(R.string.viet_nam)
-        binding.btnEnglish.text = getString(R.string.english)
+        binding.btnVietNam.text = getString(com.example.core.R.string.viet_nam)
+        binding.btnEnglish.text = getString(com.example.core.R.string.english)
     }
 
 }

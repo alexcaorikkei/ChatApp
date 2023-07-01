@@ -13,7 +13,7 @@
             android:background="@drawable/ic_avatar_unknown"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvName"
+            android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"

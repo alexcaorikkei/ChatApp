@@ -15,7 +15,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvName"
+            android:id="@+id/tv_name"
             style="@style/text_12"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_item_setting"
@@ -28,7 +28,7 @@
             tools:text="ahihi" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvEmail"
+            android:id="@+id/tv_email"
             style="@style/text_12"
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_item_setting"
@@ -37,7 +37,7 @@
             android:paddingEnd="0dp"
             android:textColor="@color/color_title_setting"
             android:textSize="@dimen/text_size_10"
-            app:layout_constraintTop_toBottomOf="@id/tvName"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
             tools:text="ahihi" />
 
         <View

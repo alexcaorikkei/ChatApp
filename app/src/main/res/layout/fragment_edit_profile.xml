@@ -16,7 +16,7 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iv_profile_background"
             android:layout_width="match_parent"
-            android:layout_height="800dp"
+            android:layout_height="1500dp"
             android:layout_marginTop="120dp"
             android:src="@drawable/img_edit_profile_background"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -43,7 +43,7 @@
             android:textSize="16sp"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/btn_save"
+            android:id="@+id/tv_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/save"
@@ -87,7 +87,7 @@
             app:layout_constraintStart_toStartOf="parent"/>
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edt_name"
+            android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
@@ -95,6 +95,8 @@
             android:drawableEnd="@drawable/ic_user"
             android:textColor="@color/black"
             android:textColorHint="#676767"
+            android:maxLines="1"
+            android:inputType="textPersonName"
             android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@id/tv_name"/>
 
@@ -107,11 +109,11 @@
             android:text="@string/phone_number"
             android:textColor="#999999"
             android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@+id/edt_name"
+            app:layout_constraintTop_toBottomOf="@+id/et_name"
             app:layout_constraintStart_toStartOf="parent"/>
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edt_phone_number"
+            android:id="@+id/et_phone_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
@@ -120,6 +122,8 @@
             android:textColor="@color/black"
             android:textColorHint="#676767"
             android:textSize="18sp"
+            android:maxLines="1"
+            android:inputType="phone"
             app:layout_constraintTop_toBottomOf="@+id/tv_phone_number"/>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -131,17 +135,17 @@
             android:text="@string/birthday"
             android:textColor="#999999"
             android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@id/edt_phone_number"
+            app:layout_constraintTop_toBottomOf="@id/et_phone_number"
             app:layout_constraintStart_toStartOf="parent"/>
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edtPassword"
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="25dp"
             android:layout_marginTop="7dp"
             android:drawableEnd="@drawable/ic_birthday_cake"
-            android:inputType="textPassword"
+            android:inputType="date"
             android:textColor="@color/black"
             android:textColorHint="#676767"
             android:textSize="18sp"

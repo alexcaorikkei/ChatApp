@@ -47,7 +47,4 @@ class AuthRepositoryImpl @Inject constructor(private val auth: FirebaseAuth) : A
     override fun logOut() {
         auth.signOut()
     }
-
-
-
 }

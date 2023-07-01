@@ -6,7 +6,7 @@ import androidx.fragment.app.viewModels
 import com.example.baseproject.R
 import com.example.baseproject.databinding.FragmentRegisterBinding
 import com.example.baseproject.domain.model.Response
-import com.example.baseproject.extension.makeLinks
+import com.example.baseproject.extension.makeLink
 import com.example.baseproject.navigation.AppNavigation
 import com.example.core.base.BaseFragment
 import com.example.core.utils.toast
@@ -27,7 +27,7 @@ class RegisterFragment() : BaseFragment<FragmentRegisterBinding, RegisterViewMod
 
     override fun initView(savedInstanceState: Bundle?) {
         super.initView(savedInstanceState)
-        binding.cbTerm.makeLinks(
+        binding.cbPoliciesAndTearms.makeLink(
             Pair(getString(R.string.policies), View.OnClickListener {
                 "policies".toast(requireContext())
             }),
@@ -35,7 +35,7 @@ class RegisterFragment() : BaseFragment<FragmentRegisterBinding, RegisterViewMod
                 "terms".toast(requireContext())
             })
         )
-        binding.tvTitleHadAccount.makeLinks(
+        binding.tvTitleHadAccount.makeLink(
             Pair(getString(R.string.login), View.OnClickListener {
                 appNavigation.openRegisterToLoginScreen()
             })
@@ -81,23 +81,23 @@ class RegisterFragment() : BaseFragment<FragmentRegisterBinding, RegisterViewMod
                 when (response) {
                     is Response.Loading -> {
                         binding.btnRegister.isEnabled = false
-                        binding.edtEmail.isEnabled = false
-                        binding.edtPassword.isEnabled = false
-                        binding.edtName.isEnabled = false
+                        binding.etEmail.isEnabled = false
+                        binding.etPassword.isEnabled = false
+                        binding.etName.isEnabled = false
                         binding.includeProgress.visibility = View.VISIBLE
                     }
                     is Response.Success -> {
                         binding.btnRegister.isEnabled = true
-                        binding.edtEmail.isEnabled = true
-                        binding.edtPassword.isEnabled = true
-                        binding.edtName.isEnabled = true
+                        binding.etEmail.isEnabled = true
+                        binding.etPassword.isEnabled = true
+                        binding.etName.isEnabled = true
                         binding.includeProgress.visibility = View.GONE
                     }
                     is Response.Failure -> {
                         binding.btnRegister.isEnabled = true
-                        binding.edtEmail.isEnabled = true
-                        binding.edtPassword.isEnabled = true
-                        binding.edtName.isEnabled = true
+                        binding.etEmail.isEnabled = true
+                        binding.etPassword.isEnabled = true
+                        binding.etName.isEnabled = true
                         binding.includeProgress.visibility = View.GONE
                     }
                 }
@@ -108,9 +108,9 @@ class RegisterFragment() : BaseFragment<FragmentRegisterBinding, RegisterViewMod
     private fun listen() {
         binding.btnRegister.setOnClickListener {
             viewModel.signUp(
-                binding.edtEmail.text.toString(),
-                binding.edtPassword.text.toString(),
-                binding.edtName.text.toString()
+                binding.etEmail.text.toString(),
+                binding.etPassword.text.toString(),
+                binding.etName.text.toString()
             )
         }
     }

@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.CheckBox
 import android.widget.TextView
 
-fun CheckBox.makeLinks(vararg links: Pair<String, View.OnClickListener>) {
+fun CheckBox.makeLink(vararg links: Pair<String, View.OnClickListener>) {
     val spannableString = SpannableString(this.text)
     for(link in links) {
         val clickableSpan = object : ClickableSpan() {

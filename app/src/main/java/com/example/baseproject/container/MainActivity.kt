@@ -36,12 +36,8 @@ class MainActivity : BaseActivityNotRequireViewModel<ActivityMainBinding>(), Dem
 
     override val layoutId = R.layout.activity_main
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var navController: NavController
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         appNavigation.bind(navHostFragment.navController)
         lifecycleScope.launch {

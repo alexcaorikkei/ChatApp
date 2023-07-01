@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatTextView
 
-fun AppCompatTextView.makeLinks(vararg links: Pair<String, View.OnClickListener>) {
+fun AppCompatTextView.makeLink(vararg links: Pair<String, View.OnClickListener>) {
     val spannableString = SpannableString(this.text)
     for(link in links) {
         val clickableSpan = object : ClickableSpan() {

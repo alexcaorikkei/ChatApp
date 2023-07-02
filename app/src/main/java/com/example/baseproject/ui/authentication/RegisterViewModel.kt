@@ -1,6 +1,5 @@
 package com.example.baseproject.ui.authentication
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
@@ -28,6 +27,25 @@ class RegisterViewModel @Inject constructor(
     private var _createNewUserResponse: MutableLiveData<Response<Boolean>> = MutableLiveData()
     val createNewUserResponse: LiveData<Response<Boolean>> get() = _createNewUserResponse
 
+    private var _validator: MutableLiveData<Boolean> = MutableLiveData()
+    val validator: LiveData<Boolean> get() = _validator
+
+
+    private var _isValidEmail = false
+    private var _isValidPassword = false
+    private var _isValidDisplayName = false
+    private var _isChecked = false
+    fun setValidState(
+        isValidEmail: Boolean? = _isValidEmail,
+        isValidPassword: Boolean? = _isValidPassword,
+        isValidDisplayName: Boolean? = _isValidDisplayName,
+        isChecked: Boolean? = _isChecked) {
+        _isValidEmail = isValidEmail!!
+        _isValidPassword = isValidPassword!!
+        _isValidDisplayName = isValidDisplayName!!
+        _isChecked = isChecked!!
+        _validator.value = _isValidEmail && _isValidPassword && _isValidDisplayName && _isChecked
+    }
 
     fun signUp(email: String, password: String, displayName: String) {
         viewModelScope.launch {

@@ -19,6 +19,20 @@ class LoginViewModel @Inject constructor(
     private var _signInResponse: MutableLiveData<Response<Boolean>> = MutableLiveData()
     val signInResponse: LiveData<Response<Boolean>> get() = _signInResponse
 
+    private var _validator: MutableLiveData<Boolean> = MutableLiveData()
+    val validator: LiveData<Boolean> get() = _validator
+
+
+    private var _isValidEmail = false
+    private var _isValidPassword = false
+    fun setValidState(
+        isValidEmail: Boolean? = _isValidEmail,
+        isValidPassword: Boolean? = _isValidPassword) {
+        _isValidEmail = isValidEmail!!
+        _isValidPassword = isValidPassword!!
+        _validator.value = _isValidEmail && _isValidPassword
+    }
+
     fun signIn(email: String, password: String) {
         viewModelScope.launch {
             _signInResponse.value = Response.Loading
